@@ -1,4 +1,14 @@
+import javax.swing.*;
+
 public class Sales {
+    public static void main(String[] args) {
+        int discount, quantity, tax, price;
+        price = Integer.parseInt(JOptionPane.showInputDialog("What was the price?"));
+        discount = Integer.parseInt(JOptionPane.showInputDialog("What was the discount?"));
+        quantity = Integer.parseInt(JOptionPane.showInputDialog("How many did you buy?"));
+
+
+    }
 
     /*Write a program, using dialog boxes, which prompts the user to enter a quantity, price, discount(as an integer) and sales tax(as an integer).
     The program should output the subtotal, tax total and total cost. Output should have proper currency format and proper rounding.
