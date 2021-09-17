@@ -1,18 +1,29 @@
 import javax.swing.*;
+import java.util.Scanner;
 
 public class MadLib {
     public static void main(String[] args) {
+        Scanner read = new Scanner(System.in);
         String noun, pluralNoun, noun2, place, adjective, noun3;
 
 
-        noun = JOptionPane.showInputDialog("Type in a noun!");
-        pluralNoun = JOptionPane.showInputDialog("Type in a plural noun!");
-        noun2 = JOptionPane.showInputDialog("Type in another noun!");
-        place = JOptionPane.showInputDialog("Type in a place");
-        adjective = JOptionPane.showInputDialog("Type in an adjective");
-        noun3 = JOptionPane.showInputDialog("Type in the last noun");
+        System.out.println("Type in a noun!");
+        noun = read.nextLine();
+        System.out.println("Type in a plural noun!");
+        pluralNoun = read.nextLine();
+        System.out.println("Type in another noun!");
+        noun2 = read.nextLine();
+        System.out.println("Type in a place");
+        place = read.nextLine();
+        System.out.println("Type in an adjective");
+        adjective = read.nextLine();
+        System.out.println("Type in the last noun");
+        noun3 = read.nextLine();
 
-        JOptionPane.showMessageDialog(null, "Be kind to your " + noun +"-footed " + pluralNoun + " For a duck may be somebody's " + noun2 + ", Be kind to your " + pluralNoun + " in " + place + " Where the weather is always " + adjective + "." + " You may think that this is the " + noun3 + ", Well it is.");
+        System.out.println("Be kind to your " + noun + ("-footed " + pluralNoun + ", For a duck may be somebody's " + noun2));
+        System.out.println("Be kind to your " + pluralNoun + " in " + place + " Where the weather is always " + adjective + ".");
+        System.out.println("You may think that this is the " + noun3 + " Well it is.");
+
 
 
     }

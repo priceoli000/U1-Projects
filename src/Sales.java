@@ -1,3 +1,6 @@
+import jdk.nashorn.internal.scripts.JO;
+
+
 import javax.swing.*;
 
 public class Sales {
@@ -6,6 +9,16 @@ public class Sales {
         price = Integer.parseInt(JOptionPane.showInputDialog("What was the price?"));
         discount = Integer.parseInt(JOptionPane.showInputDialog("What was the discount?"));
         quantity = Integer.parseInt(JOptionPane.showInputDialog("How many did you buy?"));
+        tax = Integer.parseInt(JOptionPane.showInputDialog("What is the sales tax?"));
+
+        double beforeTax = (discount/100.0) * price;
+        double beforeTax2 = price - beforeTax;
+        double quantPrice = beforeTax2 * quantity;
+        double lastTax = price * (tax/100);
+        double truePrice = quantPrice + lastTax;
+
+       JOptionPane.showMessageDialog(null, "Your total with tax is: $" + truePrice);
+
 
 
     }
